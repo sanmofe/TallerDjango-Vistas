@@ -17,3 +17,7 @@ def get_measurement(request, id):
 def del_measurement(request, id):
     l.delete_measurement(id)
     return HttpResponse('[]', content_type='application/json')
+
+def update_measurement(request, id, val):
+    l.update_measurement(id, val)
+    return HttpResponse('[]', content_type='application/json')
